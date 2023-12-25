@@ -1,0 +1,33 @@
+{% extends 'tickets/base.html' %}
+
+{% block content %}
+
+
+<div class="searchflyghtblock">
+
+    <div class="search_block">
+        <form action="{% url 'flyght_search' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Поиск</button>
+    </form>
+    </div>
+
+<div class="results">
+
+        {% for i in search_results %}
+            <div class="res">
+                <p>Направление: {{ i }}</p>
+                <p>Время вылета: {{ i.departure_date }}</p>
+                <p>Время вылета: {{ i.arrival_date }}</p>
+                <p>Цена: {{ i.price }}</p>
+                <a class="info_button" href="{{ i.get_absolute_url }}">Инфо</a>
+                <a class="buy_ticket_button" href="{{ i.get_buy_ticket_url }}">Купить билет</a>
+            </div>
+
+        {% endfor %}
+
+</div>
+</div>
+
+{% endblock %}

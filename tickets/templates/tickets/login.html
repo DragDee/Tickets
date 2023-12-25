@@ -1,0 +1,21 @@
+{% extends 'tickets/base.html' %}
+
+{% block content %}
+<div class="loginblock">
+    <title>{{ title }}</title>
+
+<form method="post">
+    {% csrf_token %}
+
+    <div class="form-error">{{ form.non_field_errors }}</div>
+    {% for f in form %}
+    <p><label class="form-label" for="{{ f.id_for_label }}">{{ f.label }}</label>{{ f }}</p>
+    <div class="form-error">{{ f.error }}</div>
+    {% endfor %}
+
+    <button type="submit">Логин</button>
+</form>
+</div>
+
+
+{% endblock %}

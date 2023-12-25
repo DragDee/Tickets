@@ -1,0 +1,10 @@
+{% extends 'tickets/base.html' %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+<p>Инфо о билете</p>
+
+
+<p>{{ ticket.arrival }} {{ ticket.departure }} {{ ticket.price }} {{ ticket.quantity }}</p>
+
+{% endblock %}

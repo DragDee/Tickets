@@ -1,0 +1,22 @@
+{% extends 'tickets/base.html' %}
+
+{% block content %}
+<h1>{{ title }}</h1>
+
+<div class="allFlyesBlock">
+    {% for i in tickets %}
+    {% if i.quantity > 0 %}
+        <div class="bought_tickets">
+            <p>Направление: {{ i }}</p>
+            <p>Время вылета: {{ i.departure_date }}</p>
+            <p>Время вылета: {{ i.arrival_date }}</p>
+            <p>Цена: {{ i.price }}</p>
+
+            <a href="{{ i.get_absolute_url }}">Подробнее</a>
+            <a href="{{ i.get_buy_ticket_url }}">Купить билет</a>
+        </div>
+
+    {% endif %}
+{% endfor %}
+</div>
+{% endblock %}

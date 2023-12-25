@@ -1,0 +1,49 @@
+<!-- index.html -->
+
+{% load static %}
+{% load tickets_tags %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{% static 'tickets/css/styles.css' %}">
+</head>
+<body>
+    {% get_menu as menu %}
+    <div class="container">
+        <div class="header">
+            <h1>{{ title }}</h1>
+            <nav class="main-menu">
+                {% block mainmenu %}
+                    <ul>
+                        {% for m in menu %}
+                            <li><a href="{% url m.url_name %}">{{ m.title }}</a></li>
+                        {% endfor %}
+
+                        {% if request.user.is_staff %}
+                            <li><a href="{% url 'soldTickets' %}">Список всех проданных билетов</a></li>
+                            <li><a href="{% url 'day_profit' %}">Расчет прибыли за день</a></li>
+                            <li><a href="{% url 'add_flyght' %}">Добавить рейс</a></li>
+                        {% endif %}
+
+                    </ul><br>
+                    <ul>
+                        {% if request.user.is_authenticated %}
+                            <li>Здравствуйте {{ request.user.first_name }} | <a href="{% url 'logout' %}">Выйти</a></li>
+                        {% else %}
+                            <li><a href="{% url 'registration' %}">Регистрация</a></li>
+                            <li><a href="{% url 'login' %}">Логин</a></li>
+                        {% endif %}
+                    </ul>
+                {% endblock mainmenu %}
+            </nav>
+        </div>
+        <div class="content">
+            {% block content %}
+            {% endblock content %}
+        </div>
+    </div>
+</body>
+</html>

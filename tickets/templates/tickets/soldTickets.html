@@ -1,0 +1,24 @@
+{% extends 'tickets/base.html' %}
+
+{% block content %}
+
+<div class="soldticketsblock">
+    <h1>{{ title }}</h1>
+
+{% for i in tickets %}
+    <div class="ticket">
+        <p> Имя пользователя = {{ i.user.first_name }}</p>
+        <p>Номер места = {{ i.place_number }}</p>
+        <p>Цена = {{ i.flyes_id.price }}</p>
+        <p>Направление = {{ i.flyes_id }}</p>
+        {% if i.cashier %}
+            <p>Куплен через кассу</p>
+        {% else %}
+            <p>Куплен через сайт</p>
+        {% endif %}
+        <a href="{{ i.get_absolute_url }}">Подробнее</a>
+    </div>
+{% endfor %}
+</div>
+
+{% endblock %}

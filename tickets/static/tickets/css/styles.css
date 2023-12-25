@@ -1,0 +1,432 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.main-menu {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.main-menu li {
+    margin-right: 10px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 20px;
+}
+
+.allFlyesBlock {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.allFlyesBlock p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.allFlyesBlock a {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #27ae60;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.allFlyesBlock a:hover {
+    background-color: #219a52;
+}
+
+
+/* Добавляем стили для tickets/registration.html */
+
+.registrationblock {
+    margin-top: 20px;
+}
+
+.registrationblock form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.registrationblock p {
+    margin-bottom: 15px;
+}
+
+.registrationblock label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.registrationblock input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.registrationblock button {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.registrationblock button:hover {
+    background-color: #c0392b;
+}
+
+.form-errors {
+    color: #e74c3c;
+    margin-top: 5px;
+}
+
+/* Добавляем стили для tickets/login.html */
+
+.loginblock {
+    margin-top: 20px;
+}
+
+.loginblock form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.loginblock p {
+    margin-bottom: 15px;
+}
+
+.loginblock label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.loginblock input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.loginblock button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.loginblock button:hover {
+    background-color: #2980b9;
+}
+
+.form-error {
+    color: #e74c3c;
+    margin-top: 5px;
+}
+
+
+/* Добавляем стили для tickets/searchflyght.html */
+
+.searchflyghtblock {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search_block {
+    flex: 1;
+    max-width: 400px;
+}
+
+.search_block form {
+    margin: 0 auto;
+}
+
+.search_block form p {
+    margin-bottom: 15px;
+}
+
+.search_block form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.search_block form input, .search_block form select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.search_block form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.search_block form button:hover {
+    background-color: #2980b9;
+}
+
+.results {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.results .buy_ticket_button{
+    background-color: #169e0b
+}
+
+.results .buy_ticket_button:hover{
+    background-color: #0e5805
+}
+
+.res {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.res p {
+    margin: 5px 0;
+}
+
+.res a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.res .info_button:hover {
+    background-color: #c0392b;
+}
+
+
+
+
+
+
+
+/* Добавляем стили для tickets/add_flight.html */
+
+.add_flight {
+    margin-top: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.add_flight form p {
+    margin-bottom: 15px;
+}
+
+.add_flight form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.add_flight form input, .add_flight form select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.add_flight form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.add_flight form button:hover {
+    background-color: #2980b9;
+}
+
+
+/* Добавляем стили для tickets/sold_tickets.html */
+
+.soldticketsblock {
+    margin-top: 20px;
+}
+
+.soldticketsblock h1 {
+    color: #333;
+}
+
+.ticket {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.ticket p {
+    margin: 5px 0;
+}
+
+.ticket a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.ticket a:hover {
+    background-color: #c0392b;
+}
+
+
+/* Добавляем стили для tickets/edit_profile.html */
+
+.profile_block {
+    margin-top: 20px;
+}
+
+.profile_block h1 {
+    color: #333;
+}
+
+.profile_block p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.profile_block h2 {
+    margin-top: 20px;
+    color: #333;
+}
+
+.profile_block form {
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.profile_block form p {
+    margin-bottom: 15px;
+}
+
+.profile_block form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile_block form input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.profile_block form button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.profile_block form button:hover {
+    background-color: #2980b9;
+}
+
+.bought_tickets {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.bought_tickets p {
+    margin: 5px 0;
+}
+
+.bought_tickets a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #e74c3c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.bought_tickets a:hover {
+    background-color: #c0392b;
+}
+
+/* Добавляем стили для tickets/index.html */
+
+.index {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.index h1 {
+    color: #333;
+}
+
+.message {
+    margin-top: 20px;
+}
+
+.message p {
+    font-size: 16px;
+    color: #555;
+}
+
+

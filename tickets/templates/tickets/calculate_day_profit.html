@@ -1,0 +1,26 @@
+{% extends 'tickets/base.html' %}
+
+{% block content %}
+
+<div class="calculate_day_profit">
+    <div class="message">
+        <p>{{ message }}</p>
+    </div>
+</div>
+
+<div class="todays_sold_tickets">
+    {% for i in todays_sold_tickets %}
+
+        <div class="bought_tickets">
+            <p>Направление: {{ i.flyes_id }}</p>
+            <p>Пользователь: {{ i.user.first_name }}</p>
+            <p>Время вылета: {{ i.flyes_id.departure_date }}</p>
+            <p>Время вылета: {{ i.flyes_id.arrival_date }}</p>
+            <p>Номер вышего места: {{ i.place_number }}</p>
+            <a href="{{ i.get_absolute_url }}">Вернуть</a>
+        </div>
+
+    {% endfor %}
+</div>
+
+{% endblock %}
